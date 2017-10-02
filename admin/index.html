@@ -33,7 +33,7 @@
         "Email":                    {"en": "Email", "de": "Email", "ru": "Email"},
         "Password":                    {"en": "Password", "de": "Passwort", "ru": "Password"},
         "on save adapter restarts with new config immediately": {
-            "de": "Beim Speichern von Einstellungen der Adapter wird sofort neu gestartet.",
+            "de": "Beim Speichern von Einstellungen, wird der Adapter sofort neu gestartet.",
             "ru": "Сразу после сохранения настроек драйвер перезапуститься с новыми значениями"
         }
     };
@@ -79,12 +79,25 @@
         <td><img src="botvac.png"/></td>
         <td><h3 class="translate">botvac adapter settings</h3></td>
     </tr></table>
-    <p>
-        <span class="translate">Email</span> <input class="value" id="mail"/><br>
-        <span class="translate">Password</span> <input type="password" class="value" id="password"/><br>
-        <span class="translate">Poll Interval (seconds)</span> <input type="number" class="value" min="60" step="1" id="pollInterval"/><br>
-    </p>
-
+	<h4 class="translate">Settings</h4>
+    <table>
+        <tr>
+            <td><label class="translate" for="Email">Email</label></td>
+            <td><input type="text" id="mail" class="value"/></td>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label class="translate" for="Password">Password</label></td>
+            <td><input type="password" id="password" class="value"/></td>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label class="translate" for="Poll Interval (seconds)">Poll Interval (seconds)</label></td>
+            <td><input type="number" min="60" step="1" id="pollInterval" class="value"/></td>
+            </select></td>
+        </tr>		
+    </table>
+	
     <p class="translate">on save adapter restarts with new config immediately</p>
 
 </div>
