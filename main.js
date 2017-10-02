@@ -247,6 +247,10 @@ adapter.on('stateChange', function (id, state) {
                 allRobots[robotName].eco = state.val;
                 adapter.setState(id, state.val, true);
                 break;
+            case 'navigationMode':
+                allRobots[robotName].navigationMode = state.val;
+                adapter.setState(id, state.val, true);
+                break;
             case 'spotWidth':
                 allRobots[robotName].spotWidth = state.val;
                 adapter.setState(id, state.val, true);
@@ -480,6 +484,15 @@ function main() {
                                         write: true,
                                         def: false,
                                         role: 'switch'
+                                    }
+                                },
+                                'navigationMode': {
+                                    common: {
+                                        type: 'number',
+                                        read: true,
+                                        write: true,
+                                        def: 1,
+                                        role: 'level'
                                     }
                                 },
                                 'cleanSpot': {
